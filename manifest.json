@@ -8,9 +8,11 @@
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
-  "background": {
-    "scripts": [
-      "background.js"
-    ]
-  }
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": ["style.css"],
+      "js": ["script.js"]
+    }
+  ]
 }
