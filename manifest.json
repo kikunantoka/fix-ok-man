@@ -1,0 +1,27 @@
+{
+  "name": "Fix style of :ok_man: in GitHub",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This is fixing style of :ok_man: in GitHub extension.",
+  "icons": {
+    "16": "icons/icon_16.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": ["style.css"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon_16.png"
+  },
+  "permissions": [
+    "tabs", "https://github.com/*"
+  ]
+}
